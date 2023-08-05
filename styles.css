@@ -3,30 +3,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  background-color: #f0f0f0;
 }
 
-#calculator {
-  /* Define the width and height of your calculator */
+.calculator {
   width: 300px;
-  height: 400px;
-  /* Add any additional styling for the calculator */
   background-color: #f0f0f0;
   border: 2px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-button {
-  width: 100%;
-  height: 60px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #f0f0f0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+  font-size: 24px;
 }
 
 .display {
@@ -39,4 +29,20 @@ button:hover {
   border: 1px solid #ccc;
   font-size: 32px;
   padding: 10px;
+}
+
+button {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
+button:active {
+  background-color: #ccc;
 }
