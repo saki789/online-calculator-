@@ -1,37 +1,17 @@
-let displayValue = '0';
-
-function updateDisplay() {
-  const display = document.getElementById('display');
-  display.textContent = displayValue;
-}
+let display = document.getElementById('display');
 
 function appendToDisplay(value) {
-  if (displayValue === '0' && value !== '.') {
-    displayValue = value;
-  } else {
-    displayValue += value;
+  display.value += value;
+}
+
+function calculate() {
+  try {
+    display.value = eval(display.value);
+  } catch (error) {
+    display.value = 'Error';
   }
-  updateDisplay();
 }
 
 function clearDisplay() {
-  displayValue = '0';
-  updateDisplay();
+  display.value = '';
 }
-
-function calculateResult() {
-  try {
-    displayValue = eval(displayValue).toString();
-  } catch (error) {
-    displayValue = 'Error';
-  }
-  updateDisplay();
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  updateDisplay();
-});
-
-window.addEventListener('keydown', (event) => {
-  const key = event.key;
-  if (/[0-9+\
