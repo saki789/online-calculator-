@@ -1,35 +1,17 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .calculator {
-    margin: 50px auto;
-    width: 240px;
-    
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    
+  /* Define the width and height of your calculator */
+  width: 300px;
+  height: 400px;
+  /* Add any additional styling for the calculator */
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-#display {
-    width: 100%;
-    height: 40px;
-    font-size: 20px;
-    text-align: right;
-    margin-bottom: 100px;
-
-}
-
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5px;
-}
-
-button {
-    width: 100%;
-    height: 100%;
-    font-size: 18px;
-    cursor: pointer;
