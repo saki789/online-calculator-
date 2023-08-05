@@ -1,17 +1,37 @@
-let display = document.getElementById("display");
+let displayValue = '0';
+
+function updateDisplay() {
+  const display = document.getElementById('display');
+  display.textContent = displayValue;
+}
 
 function appendToDisplay(value) {
-  display.value += value;
+  if (displayValue === '0' && value !== '.') {
+    displayValue = value;
+  } else {
+    displayValue += value;
+  }
+  updateDisplay();
 }
 
 function clearDisplay() {
-  display.value = "";
+  displayValue = '0';
+  updateDisplay();
 }
 
-function calculate() {
+function calculateResult() {
   try {
-    display.value = eval(display.value);
+    displayValue = eval(displayValue).toString();
   } catch (error) {
-    display.value = "Error";
+    displayValue = 'Error';
   }
+  updateDisplay();
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateDisplay();
+});
+
+window.addEventListener('keydown', (event) => {
+  const key = event.key;
+  if (/[0-9+\
