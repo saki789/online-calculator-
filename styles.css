@@ -29,3 +29,14 @@ button:hover {
   background-color: #f0f0f0;
 }
 
+display {
+  grid-column: span 4;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-size: 32px;
+  padding: 10px;
+}
