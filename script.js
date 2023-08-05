@@ -1,4 +1,3 @@
-// JavaScript code for the calculator web app
 let display = document.getElementById('display');
 
 function appendToDisplay(value) {
