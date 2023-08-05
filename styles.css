@@ -5,7 +5,7 @@ body {
 
 .calculator {
   width: 240px;
-  margin: 0 auto;
+  margin: 90 auto;
   border: 1px solid #ccc;
   padding: 10px;
 }
