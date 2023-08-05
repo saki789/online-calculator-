@@ -9,8 +9,11 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    position: absolute;
-    top: 100%;
+    
+    position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #display {
@@ -19,6 +22,7 @@ body {
     font-size: 20px;
     text-align: right;
     margin-bottom: 100px;
+
 }
 
 .buttons {
