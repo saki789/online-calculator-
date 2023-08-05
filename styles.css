@@ -6,7 +6,7 @@ body {
   height: 100vh;
 }
 
-.calculator {
+calculator {
   /* Define the width and height of your calculator */
   width: 300px;
   height: 400px;
@@ -29,7 +29,7 @@ button:hover {
   background-color: #f0f0f0;
 }
 
-.display {
+display {
   grid-column: span 4;
   height: 80px;
   display: flex;
